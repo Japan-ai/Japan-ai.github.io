@@ -1,0 +1,21 @@
+✔️Done list
+・sptabで横揺れしない対処
+→やった事　
+① この記述を追加して強制的に横揺れしないようにしようとするも出来なかった
+　　　@media screen and (max-width : 767px){
+      html,
+      body {
+      overflow-x: hidden!important;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      }
+     }
+②widthをpxで指定したもの全てにmax-width100%を追加したが効かない
+
+✔️TIL
+
+✔️more
+・sptabで横揺れしない対処
+heightをpxで設定しないことを試してみたい
+
+✔️Output rate
