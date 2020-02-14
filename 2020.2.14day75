@@ -1,0 +1,30 @@
+✔️Done list
+・レスポンシブ 特訓
+背景画像を縦横比保って設定/VSCodeユーザースペニット CSS 「bgbgにて登録」
+
+✔️TIL
+①背景画像を縦横比保って設定
+・body : width100%
+・セクションのクラス : width: 100% ;
+                  height : ○○px ;
+                  background-image: url() ;  
+                  background-size: cover ;  
+                  padding-top:　○○ % ;  //★ポイント　背景画像の縦横比を保つ 縦÷横×100%
+              
+ ②文字を背景画像の上に配置
+ ・親要素 : position:relative;
+ ・子要素(h1やp要素) :  position: absolute ;
+                      top: ○○ px;
+                      left: ○○ px;
+
+
+✔️more
+・widthをpx設定辞め%で設定してもスマホタブレットの時に横スクロールが出来てしまう対処法が分からない
+→
+heightをpx設定しているから？
+・zindex正しく設定しても上下の設定が逆になってしまう
+→
+position:relative absolute;の違い等か?
+
+✔️Output rate
+70%
