@@ -1,0 +1,18 @@
+✔️Done list
+・DreamMapperApp作成2日目
+-テストデータの挿入
+ シーダファイルの作成・編集(/Users/koikeai/laravel_docker/src/database/seeds/FoldersTableSeeder.php)
+-テンプレートの作成(/Users/koikeai/laravel_docker/src/resources/views/challengelist/index.blade.php)
+-ChallengeListController.phpの編集
+-CSS実装(/Users/koikeai/laravel_docker/src/public/css/styles.css)
+
+・ITパスポート５P
+・タイピング
+
+✔️TIL
+
+✔️more
+シーダファイルの作成
+
+✔️Output rate
+90%
