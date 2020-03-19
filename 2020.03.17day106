@@ -1,0 +1,16 @@
+✔️Done list
+・laravelインプット
+-データベース操作
+-MVCモデル
+-artisanコマンド操作方法
+
+✔️TIL
+
+✔️more
+
+✔️Output rate
+50%
+
+✔️メンターからのアドバイス
+★artisanコマンドはphpコンテナ内で実行するため
+「$ docker-compose exec php　+　artisanコマンド」とする
