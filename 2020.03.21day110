@@ -1,0 +1,19 @@
+✔️Done list
+DreamMapperApp作成4日目
+【大枠】分類フォルダの新規作成機能
+・分類フォルダの新規作成ページ表示・分類フォルダの新規作成処理に関するRouteの設定(/Users/koikeai/laravel_docker/src/routes/web.phpの編集)
+・分類フォルダの新規作成ページ表示・分類フォルダの新規作成処理に関するControllerの作成(/Users/koikeai/laravel_docker/src/app/Http/Controllers/FolderController.phpの新規作成と編集 )
+・分類フォルダの新規作成ページ表示・分類フォルダの新規作成処理に関するViewの作成(/Users/koikeai/laravel_docker/src/resources/views/folders/create.blade.phpの新規作成)
+・入力値のバリデーション(エラー表示機能)
+-FormRequestクラスの作成($ docker-compose exec php php artisan make:request CreateFolderコマンドで/Users/koikeai/laravel_docker/src/app/Http/Requests/CreateFolder.phpの新規作成)
+-Controllerの編集(/Users/koikeai/laravel_docker/src/app/Http/Controllers/FolderController.phpの編集)
+-Viewの編集(/Users/koikeai/laravel_docker/src/resources/views/folders/create.blade.phpの編集)
+-エラーメッセージを日本語化する（mkdir jpコマンドで/Users/koikeai/laravel_docker/src/resources/lang直下にjpフォルダを新規作成・編集)
+-日本語版の設定を参照するように /Users/koikeai/laravel_docker/src/config/app.phpの編集)
+-文字数制限を追加する(/Users/koikeai/laravel_docker/src/app/Http/ControllersFolderController.phpの編集)
+-入力エラーでフォーム画面に戻ったに入力欄の値を消さない(復元する)処理(/Users/koikeai/laravel_docker/src/resources/views/folders/create.blade.phpの編集)
+
+✔️メンターからのアドバイス
+★マイグレーションは実行順番が重要。(外部キーに関するマイグレーション実行エラーの対処)
+★Laraveの場合、css(scss)は /resources/css に記述する。それらのファイルをwebpackというツールを使ってビルドし、 public/css 配下にcssを出力する仕組み。
+★cssのURL出力は asset 関数を使用。
