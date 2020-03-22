@@ -1,0 +1,77 @@
+✔️Done list
+【大枠１】チャレンジリストの新規作成機能
+・チャレンジリストの新規作成機能に関するRouteの設定(/Users/koikeai/laravel_docker/src/routes/web.phpの編集)
+・チャレンジリストの新規作成ページ表示・新規作成処理に関するControllerの設定(/Users/koikeai/laravel_docker/src/app/Http/Controllers/ChallengeListController.phpの編集 )
+・チャレンジリストの新規作成ページ表示・新規作成処理に関するViewの設定(/Users/koikeai/laravel_docker/src/resources/views/folders/create.blade.phpの新規作成・編集)
+
+・カレンダー式日付選択機能
+-/Users/koikeai/laravel_docker/src/resources/views/challengelist/create.blade.phpの編集(JavaScript ライブラリ flatpickrの導入)
+
+・Blade のレイアウト機能を使って、重複する記述をレイアウトファイルにまとめる
+-/Users/koikeai/laravel_docker/src/resources/views/layout.blade.phpファイルを新規作成・編集(@yields())
+-/Users/koikeai/laravel_docker/src/resources/views/challengelist/create.blade.phpファイルの編集(@extends() , @section())
+-/Users/koikeai/laravel_docker/src/resources/views/challengelist/index.blade.phpファイルの編集(@extends() , @section())
+-/Users/koikeai/laravel_docker/src/resources/views/folders/create.blade.phpファイルの編集(@extends() , @section())
+
+・新規リスト作成機能(新規リストの保存)
+-FormRequest クラスの作成(/Users/koikeai/laravel_docker/src/app/Http/Requests/CreateChallengelist.phpの新規作成・編集)
+-エラーメッセージを日本語へ設定変更(/Users/koikeai/laravel_docker/src/resources/lang/jp/validation.phpの編集)
+-新規チャレンジリスト作成機能(新規リストの保存)に関するControllerの設定(/Users/koikeai/laravel_docker/src/app/Http/Controllers/ChallengeListController.phpの編集)
+-新規チャレンジリスト作成機能(新規リストの保存)に関するViewの設定-(Users/koikeai/laravel_docker/src/resources/views/challengelist/index.blade.phpの編集)
+
+・新規チャレンジリスト作成時の「期日設定の不正入力」に関するバリデーションテスト(今日より前日付の選択はエラー)
+-/Users/koikeai/laravel_docker/src/config/database.phpの編集
+-/Users/koikeai/laravel_docker/src/phpunit.xmlの編集
+-/Users/koikeai/laravel_docker/src/tests/Feature/ChallengelistTest.phpの新規作成・編集)
+-$ ./vendor/bin/phpunit ./tests/Feature/ChallengelistTest.phpコマンドの実行
+ 
+【大枠２】チャレンジリストの編集機能
+・チャレンジリストの編集ページ表示・編集処理に関するRouteの設定
+-/Users/koikeai/laravel_docker/src/routes/web.phpの編集
+-バリデーションのためのFormRequest クラス作成(/Users/koikeai/laravel_docker/src/app/Http/Requests/EditChallengelistの新規作成)
+・チャレンジリストの編集ページ表示・編集処理に関するControllerの設定(/Users/koikeai/laravel_docker/src/app/Http/Controllers/ChallengeListController.phpの編集)
+・チャレンジリストの編集ページ表示・編集処理に関するViewの設定
+-/Users/koikeai/laravel_docker/src/resources/views/challengelist/edit.blade.phpの新規作成・編集
+-/Users/koikeai/laravel_docker/src/resources/views/challengelist/index.blade.phpファイルの編集
+
+・重複部分をテンプレートへ記述(challenge list新規作成ページとchallenge list編集ページの重複する記述をまとめる )
+-/Users/koikeai/laravel_docker/src/resources/views/share/flatpickr/scripts.blade.phpの新規作成・編集
+-/Users/koikeai/laravel_docker/src/resources/views/share/flatpickr/styles.blade.phpの新規作成・編集
+-/Users/koikeai/laravel_docker/src/resources/views/challengelist/edit.blade.php
+の編集(@include())
+
+・新規チャレンジリスト編集時の「実行ステータス不正入力」に関するバリデーションテスト
+-/Users/koikeai/laravel_docker/src/tests/Feature/ChallengelistTest.phpの編集
+-$ ./vendor/bin/phpunit ./tests/Feature/ChallengelistTest.phpコマンドの実行
+
+✔️TIL
+・マイグレーション実行エラーの対処方法
+・バリデーションテスト
+・テンプレートの作成(重複記述部分のまとめ記述)
+・JavaScript ライブラリ flatpickr
+・リレーションを活かしたデータの保存方法
+・due_date_should_be_date メソッド
+・setUp メソッド
+・assertSessionHasErrors メソッド
+・rules メソッド
+・attributes メソッド
+・ in ルール
+
+✔️more
+・バリデーションテスト
+・URL設計
+
+✔️Output rate
+95%
+
+✔️メンターからのアドバイス
+★マイグレーション実行エラーへの対処
+-$ docker-compose exec php php artisan route:listで現在のRouteの設定を確認
+-マイグレーションの実行はファイルの作成日時の古い順に実行される
+-マイグレーションのロールバックはファイルの作成日時の新しい順に実行される
+★VSCodeショートカットの活用は必須
+
+
+
+
+
