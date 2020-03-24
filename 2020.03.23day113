@@ -1,0 +1,33 @@
+✔️Done list
+Dream Mapper App 作成６日目
+【大枠】全体の修正
+
+・ITパスポート学習５p
+・タイピング
+
+✔️TIL
+・ライブラリ Carbon を使って現在日時の表示
+・バリデーションテストにはrunメソッドを使用
+・テンプレート(アプリケーションがレスポンスするHTMLの雛形、ページの枠組みだけ用意して、URLによって変わる箇所だけが穴埋めになっているイメージ、雛形が同じでもデータを変えることで別のページを作り出せる仕組み
+)
+・allクラスメソッド
+・route関数(ルーティングの設定から URL を作り出す関数)
+・Carbonライブラリ(日付操作のライブラリ)の addDay メソッド
+・find メソッド(プライマリキーのカラムを条件として一行分のデータを取得)
+・クエリビルダ where メソッド
+・アクセサ
+・getStatusLabelAttribute メソッド
+・getFormattedDueDateAttribute メソッド
+・hasMany メソッド(hasManyメソッド　【1対多】のリレーションを定義する)
+・save メソッド
+・redirect メソッド
+・authorize メソッド
+・rule メソッド
+・attributes メソッド
+・Bladeのレイアウト機能を活用して、HTMLの重複記述をレイアウトファイルにまとめる
+・old関数
+
+✔️more
+
+✔️Output rate
+95%
