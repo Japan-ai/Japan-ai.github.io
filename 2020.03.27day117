@@ -1,0 +1,16 @@
+✔️Done list
+【大枠】微調整
+・バリデーションテストのエラーを解消
+・ブラウザ画面表示のエラーを解消
+・CSS 微修正
+・Herokuでデプロイの準備
+
+✔️TIL
+・クラウドサービス(iaas,paas,saas)
+・Heroku(クラウドサービス)
+・テレカン(Telephone conference)
+・PHPUnit
+・ペチパー(PHPer)✔️more✔️Output rate
+
+✔️メンターからのアドバイス
+★(Docker)コンテナ内でのコマンド実行($ docker-compose exec php shと$ exit)
