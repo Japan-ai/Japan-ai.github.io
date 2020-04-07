@@ -1,0 +1,21 @@
+✔️Done list
+ExperienceProviderApp 作成 2日目
+【大枠】カート画面 　　
+
+・カート情報に関するRouteの設定
+・カート情報に関するViewの設定
+・カート情報に関するModelの設定(app/Stock.phpの作成・編集)
+・カート情報に関するControllerの設定
+・カート情報に関するテーブルの作成 ($ php artisan make:migration create_carts_table)
+ -カラムの追加(database/migrations/create_carts_table.phpファイルの編集)
+ -カート情報に関するマイグレーションの実行 ($php artisan migrate)
+・カートページをログインユーザーのみ閲覧可能にする実装
+ -web.phpをRoute::get('/mycart', 'ShopController@myCart')->middleware('auth');に修正
+ 
+ ✔️TIL
+・Laravelの命名規則で
+ Modelのクラス名を単数形で指定して、テーブル名を複数形にするというものがあるので、それを満たしておけばLaravelが判断して結びつけ
+
+✔️Output rate
+90%
+
