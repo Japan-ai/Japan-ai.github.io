@@ -1,0 +1,14 @@
+✔️Done list
+DreamMapperApp 作成 16日目
+【大枠】
+削除機能の実装
+CSSの修正
+
+✔️TIL
+・ Logファサード
+ -アプリケーションの状況を記録するので、どんな入力をしてどんな処理が起きたかを確認できる、デバッグの手法として活用できる)
+ -ログのレベル(重要度) に応じてemergency、alert、critical、error、warning、notice、info 、debug を使い分け
+ -ログの出力先はデフォルトでは storage/logs/laravel.log
+ 
+✔️Output rate
+90%
