@@ -1,0 +1,30 @@
+✔️Done list
+ExperienceProviderApp　作成　1日目
+【大枠】
+環境構築
+商品一覧画面に関する設定
+
+・商品一覧画面に関する テーブルの作成
+ -商品一覧画面に関するテーブルの作成 ($ php artisan make:migration create_stocks_table)
+ -カラムの追加(database/migrations/create_stocks_table.phpファイルの編集)
+ -マイグレーションの実行 ($ php artisan migrate)
+・商品一覧画面に関するシーダーを作成しテーブルに情報を挿入
+ -StockTableシーダーの作成 (app/seeds/StockTableSeederの新規作成・編集  $ php artisan make:seed StockTableSeeder)
+ -オートロード($ composer dump-autoload)
+ -商品一覧画面に関するシーダーの実行 ($ php artisan db:seed)
+・商品一覧画面に関するRouteの設定
+・商品一覧画面に関するControllerの設定
+・商品一覧画面に関するViewの設定
+・商品一覧画面に関するModelの設定(app/Stock.phpの作成・編集 )
+・ 商品一覧画面に関するControllerの設定
+
+✔️TIL
+・Laravel で DB を操作するには二つの方法
+①DBファサード
+②Eloquent（エロクアント）
+
+✔️Output rate
+80%
+
+
+
