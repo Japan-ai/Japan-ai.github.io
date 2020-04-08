@@ -1,0 +1,76 @@
+✔️Done list
+Expeience Provider App 作成 3日目
+【大枠】
+カート追加機能
+カート削除機能
+カート内の合計金額表示機能
+CSS実装
+
+
+
+・カート追加に関するRouteの設定(web.phpの編集)
+
+・ カート追加画面表示・カート追加処理に関するControllerの設定(ShopContoller.phpの編集)
+
+・カート追加画面表示・カート追加処理に関するViewの設定(mycart.blade.phpの編集)
+
+・カート追加画面表示・カート追加処理に関するModelの設定(app/Stock.phpとapp/Cart.phpの作成・編集 )
+
+
+
+・カート削除に関するRouteの設定(web.phpの編集)
+
+・ カート削除画面表示・カート削除処理に関するControllerの設定(ShopContoller.phpの編集)
+
+・カート削除画面表示・カート削除処理に関するViewの設定(mycart.blade.phpの編集)
+
+・カート削除画面表示・カート削除処理に関するModelの設定(app/Stock.phpとapp/Cart.phpの作成・編集 )
+
+
+・カート内の合計金額表示機能
+
+・ カート内の合計金額表示に関するRouteの設定
+
+・ カート内の合計金額表示に関するViewの設定(-app/Cart.phpの編集)
+
+ (その他コントローラーに書く・モデルに書く・ビューに書く等の複数の選択肢あり)
+
+・ カート内の合計金額表示に関するControllerの設定(ShopControllerの編集)
+
+・ カート内の合計金額表示に関するViewの設定(mycart.blade.phpの編集)
+
+
+・CSS修正
+
+-/resouces/sass/app.scssの編集
+
+-/resouces/sass/_style.scssの新規作成・編集
+
+-scss(sass)ファイルをコンパイルしてcssに変換(Laravelのlaravel Mixというビルドツールでappをターミナルで開いて  $ npm run dev これだけで変換が完了します。)
+
+-ヘッダーの編集(resouces/views/layout/app.blade.phpの編集)
+
+-カートアイコンの追加
+
+
+✔️TIL
+・scss(sass)ファイルをコンパイルしてcssに変換
+　-$ npm run dev
+・メソッドインジェクション
+　-ex public function myCart(Cart $cart)が引数を持つケース
+　-Cart $cart()内の引数に持つ事で、$cart = new Cart();という通常のインスタンス化の記述を不要にできる
+・number_format()関数
+　-数値を1,000単位でカンマ区切りに
+・compact()関数
+　-変数を配列に
+・「クエリが大量に発行されたことによるタイムアウト」を避けるために重要な"Eager loading"
+・リーダブルコードを意識
+　-一連の処理をコピペした瞬間に自分を疑う✔️Output rate
+
+
+
+
+
+
+
+
