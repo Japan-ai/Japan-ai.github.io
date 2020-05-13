@@ -1,0 +1,14 @@
+✔️Done list
+Experience Provider App　作成7日目
+
+【大枠】
+Experience Provider App
+プロになるためのweb技術入門　5P
+タイピング　強化
+
+【詳細】
+マルチ認証機能(ユーザー認証部分の修正)
+
+TIL
+・Larval Token API認証に関して
+・config/auth.php記述内容の理解
