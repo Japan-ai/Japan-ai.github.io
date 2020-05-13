@@ -1,0 +1,24 @@
+✔️Done list
+Expeience Provider App 作成 4日目
+【大枠】
+購入機能
+
+購入するボタンを押すと購入完了画面に遷移
+カートテーブルから該当の商品を削除
+Mailの送信内容を記述
+Mailhogで擬似のメールを送信(Mailtrap使用)
+購入完了メール
+・購入機能に関するRouteの設定(web.phpの編集)
+・購入機能に関するControllerの設定(ShopContoller.phpの編集)
+・購入機能に関するViewの設定(mycart.blade.phpの編集)
+・購入機能に関するModelの設定(app/Cart.phpの編集 )
+
+プロになるためのweb技術入門　７P
+タイピング　強化
+
+✔️TIL
+・markdown()は、テンプレート中のmarkdownを解釈してくれるHTMLメールを生成
+・補修や点検がしやすいコードを目指す
+「いつか補修する」
+「いつか引き継ぐ」
+「いつかチームで作る」
