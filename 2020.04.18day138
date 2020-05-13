@@ -1,0 +1,25 @@
+✔️Done list
+
+【大枠】
+・ExperienceProviderApp 管理者ログイン画面の作成
+・タイピング強化
+・書籍  プロになるためのWeb技術入門　４P
+
+【管理者ログイン　詳細】
+-管理者ログイン画面の作成に関するマイグレーションファイルの作成、マイグレーション の実行(create_admins_table
+)
+-管理者ログイン画面の作成に関するモデルの作成(Auth.phpの作成)
+-管理者ログイン画面の作成に関するconfig/auth.phpの編集(auth.phpはログイン認証)
+-管理者ログイン画面の作成に関するapp/Exceptions/Handler.phpの編集
+-管理者ログイン画面の作成に関するRouteの編集(web.php)
+-管理者ログイン画面の作成に関するControllerの作成・編集(app/Http/Controllers/Admin/Auth/LoginController.php,app/Http/Controllers/Admin/Auth/RegisterController.php
+)
+-管理者ログイン画面の作成に関するViewの作成・編集(resources/views/layouts/admin.blade.php
+)
+
+✔️TIL
+・ord()
+-文字を文字コードに変換する
+
+・ chr()
+-数値から、1バイトの文字列を生成する
