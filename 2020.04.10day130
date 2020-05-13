@@ -1,0 +1,31 @@
+✔️Done list
+Expeience Provider App 作成 5日目
+【大枠】
+購入機能
+
+Mailの送信内容を記述
+Mailhogで擬似のメールを送信(Mailtrap使用)
+購入完了メール
+
+・購入機能に関するRouteの設定(web.phpの編集)
+・購入機能に関するControllerの設定(ShopContoller.phpの編集)
+・購入機能に関するViewの設定(mycart.blade.phpの編集)
+・購入機能に関するModelの設定(app/Cart.phpの編集 )
+
+プロになるためのweb技術入門　5P
+タイピング　強化
+
+✔️TIL
+・Paginate(数字);
+-数字が１ページで表示する情報量、今回は１ページに(数字)つの情報を表示ということになる
+・firstOrCreate([‘ ' =>  ‘ ']);
+if ($○ ->wasRecentlyCreated) {
+$message = 'カートに追加しました';
+} else {
+$message = 'カートに登録済みです';
+}
+return $message;
+-同じ値を持つレコードが存在するかどうか確認し、存在すれば保存、データの取得と登録を同時に行う
+-第1引数には，検索したいレコードのカラム名とその値を連想配列で渡す。第2引数には，新しくレコードを追加する場合に挿入する他のカラムの値を指定
+・Auth::user()
+-ユーザーがログイン情報を取得
