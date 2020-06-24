@@ -1,0 +1,8 @@
+✔️Done list
+・Node.jsで買い物リストアプリ（トップページ、一覧リストページ）
+
+✔️TIL
+・Node.js Expressのreq,res
+・Node.js res.render(ビューファイル名)　　指定したファイルを画面表示させる
+・Node.js html部分の書き方
+・Node.js css部分の書き方
