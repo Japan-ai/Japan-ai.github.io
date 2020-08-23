@@ -1,0 +1,65 @@
+✔️Done list
+Ruby on Railsインプット
+
+✔️TIL
+（参照１：https://gist.github.com/kenta-polyglot/bc0657525f37cd50c9f9399a4f86b04a）
+ (参照２:http://www.tohoho-web.com/ruby/index.html)
+ 
+・演算子（参照:http://www.tohoho-web.com/ruby/operators.html）
+・変数
+・定数
+・条件分岐
+・繰り返し
+・範囲オブジェクト
+・配列
+　　atメソッド
+  　Arrayクラス
+  　配列に対する繰り返し
+  　多次元配列
+・ハッシュ
+　　存在しないキーを指定した場合にデフォルトで返される値の変更
+  　要素の追加と値の変更
+    ハッシュのサイズの取得
+    ハッシュに対する繰り返し
+    括弧の省略
+    ハッシュに含まれるキーや値を配列として取得
+・メソッド
+　　トップレベル
+  　selfとmain
+    トップレベルに定義されたメソッド
+    メソッドの定義と呼び出し
+    引数を配列として受け取る
+    戻り値
+    戻り値(多重代入)
+・クラス
+　　アクセスメソッド
+  　定数
+    クラス変数
+    継承
+    オーバーライド
+    スーパークラスのメソッドを呼び出す
+    アクセス制御
+・モジュール
+　　モジュールの定義
+  　モジュールを関数のように使う
+    クラスにモジュールをincludeする
+・%記法
+・%w記法
+・メソッド引数のアスタリスク
+・シンボル
+・print/puts/p/inspect
+・requireとincludeの違い
+・alias
+・define_method
+・module
+・moduleローカル変数、インスタンス変数、クラス変数、グローバル変数、定数
+・DSL(Domain Specific Language)
+・block, Proc, lambda, method
+・｢!｣キーワード
+・クラス内でのselfと@の違い
+・特異クラス
+・rubyでselfを省略出来ない場合
+・module_functionの用途
+・Module::includedメソッド
+・begin/rescue/ensure
+・block_given?(ブロックが渡されたかどうかの判定)
