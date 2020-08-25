@@ -1,0 +1,18 @@
+✔️Done list
+ Ruby on Railsチュートリアル第4版　第1章1.3〜第2章(参照:https://railstutorial.jp/chapters/beginning?version=5.0#sec-bundler)
+ 
+ ✔️TIL
+ 　環境構築
+   バージョン管理
+   本番環境へのデプロイ（Heroku）
+   scaffoldジェネレータ
+   MVCモデル
+   CRUD
+   REST（REpresentational State Transfer）
+   scaffoldコマンド
+   リソース
+   インスタンス変数（@）
+   has_many :
+   belongs_to :
+   rails consoleコマンド
+   クラスの継承
