@@ -1,68 +1,19 @@
 ✔️Done list
-　Ruby on Railsチュートリアル 第4版第3章
+　Ruby on Railsチュートリアル 第4版第3章〜第4章
  
 ✔️TIL
- $ rails server　 省略　$ rails s（サーバーの起動、アプリの起動）
- $ rails console	省略　$ rails c(consoleはRubyのコードを実行できるツール、例えばどういった処理を書けば良いのか試行錯誤したいときに、毎回 rails 内のコードを書いて動かして試すのは面倒。rails console を使えば、すぐにコードを実行することができますし、色々なメソッドの動きを確かめながら実装することができる。また、エラーが起きたけどエラー文を見ても原因がわからないときなどは rails console を使ってみましょう。
-rails console を使えば、実装したコードを１行ずつ実行して結果を見ながらデバッグすることができる。そのため、どの行でなぜエラーが起きたのかという原因を突き止めやすくなる。)
- $ rails generate	省略　$ rails g
- $ rails test	　　省略　$ rails t
- $ bundle install	省略　$ bundle
- 
-【アプリ作成の一連のコマンド】
-①アプリの雛形ファイル作成
- $ cd ~/workspace（フォルダに移動）
- $ rails _5.0.3_ new toy_app（railsバージョン5.2.3を使用して、新規アプリケーションtoy_appの雛形の作成　※アプリケーション名に空白は使用できない点に注意）
- $ cd toy_app/
- Gemファイルをテキストエディタで編集
- $ bundle install --without production（本番用のgemを除いたローカルgemをインストール）
+　RESTアーキテクチャー（REpresentational State Transfer）
+　コマンドと省略
+　アプリ作成の一連のコマンド
+　アプリケーション作成時の雛形ファイル作成
+　Heroku関連のコマンド
+　HTTP(HyperText Transfer Protocol)の4つの基本的な操作
+　テストに関して
+　「埋め込みRuby」(Embedded Ruby) を使用して、重複部分をなくす
+  カスタムヘルパー
+  rails console
+  ハッシュとシンボル
+  inspectメソッド
 
-②Gitへのpush
- $ git init（GitでこのToyアプリケーションをバージョン管理下に置く）
- $ git add -A（GitでこのToyアプリケーションをバージョン管理下に置く）
- $ git commit -m "Initialize repository"（GitでこのToyアプリケーションをバージョン管理下に置く）
- $ git remote add origin git@bitbucket.org:<username>/toy_app.git(Bitbucketで [Create] ボタンをクリックして新しいリポジトリを作成)
- $ git push -u origin --all(生成したファイルをこの新しいリモートリポジトリにプッシュ)
- 
- ③編集（MVC作成、CRUD機能作成など、詳細は以下の通り）
- 【MVC関連のコマンド】
- $ rails generate scaffold モデル名 カラム名1:データ型1 カラム名2:データ型 2 …（scaffoldの利用、モデルの作成）
- $ rails db:migrate（データベースのマイグレーション）
- $ rails db:rollback(データベースのマイグレーション一つ戻る)
- $ rails db:migrate VERSION=0(マイグレーションを最初の状況に戻す)
- $ rails destroy model User（モデルの削除　※モデル名以外の引数は不要）
- $ rails generate controller StaticPages home help（StaticPagesコントローラー、home、helpアクションの作成）
- $ rails destroy  controller StaticPages home help（作成したStaticPagesコントローラー、home、helpアクションの削除）
- 
- ④編集した内容をGitに反映させherokuにpush
- $ git commit -am "Add hello"（変更した内容をGitにコミット）
- $ heroku create（herokuにもpush）
- $ git push heroku master
- $ heroku run rails db:migrate(定義したモデルがHeroku上のデータベースが更新されます。マイグレーションが完了すれば、Toyアプリを実際のPostgreSQLデータベースをバックエンドに配置した本番環境で利用できるようになる)
 
- 
- 
-【アプリケーション作成時の雛形ファイル作成】
- $ rails new sample -d mysql(オプションの-dは、Railsのデフォルトのデータベースsqlite3から、一般的に広まっているデータベースである「mysql」や、Herokuでよく使用される「postgress」に変更することができます。)
- $ rails new sample -T(railsはデフォルトminitestというテストを使用。しかしrspecなどの他のテストフレームワークを使用したいという時は、このコマンドを使用すればテストを作成せずにnewすることができ、rspecの導入が簡単になります。)
- $ rails new sample -G(gitignoreを組み込み見たくない時に打ち込むコマンドです。)
- $ rails new sample -f(ファイルが存在する場合上書きして作成するためのコマンド。一度newしたが、もう一度やり直したい時に使用。)
- $ rails new sample--skip-bundle(Railsプロジェクト作成時にbundle installを行わないようにする)
 
-【Heroku関連のコマンド】
- $ heroku login
- $ heroku help（herokuコマンドの一覧表示）
- $heroku -v（バージョンの確認）
- $ heroku create(Herokuに新しいアプリケーションを作成)
- $ heroku rename rails-tutorial-hello（アプリ名の変更）
- $ git push heroku master（Herokuにデプロイする、Gitを使ってHerokuにリポジトリをプッシュ）
- $heroku open(ブラウザ表示)
- $ heroku logs（Herokuログの確認、エラー時など）
- 
-【HTTP(HyperText Transfer Protocol)の4つの基本的な操作】
- クライアント (例えばFirefoxやSafariなどのWebブラウザ) とサーバー (ApacheやNginxなどのWebサーバー) は、4つの基本操作を互いに認識できるようになっている
- GET(ページを取得する (get a page))
- POST(ページ上のフォームに入力した値を、ブラウザから送信する時に使用)
- PATCH(サーバー上の何かを更新する時に使用)
- DELETE(サーバー上の何かを削除する時に使用)
- 
