@@ -1,0 +1,21 @@
+✔️Done list
+　Ruby on Railsチュートリアル第4版　第5章〜第6章(参照:https://railstutorial.jp/chapters/beginning?version=5.0#sec-bundler)
+
+✔️TIL
+　パーシャル（部品テンプレート、同じ記述を繰り返さないためにパーシャルで共通コードをまとめる）
+  HTML
+  CSS
+  SCSS SAAS
+  Bootstrap
+  Routing
+  リンクのテスト（assert_template, assert_select）
+  統合テスト
+  データベースの検索
+  データベースの更新
+  モデルのテスト
+  長さに関するテスト
+  メールアドレスを重複させない
+  安全なパスワード
+  パスワード最小文字数の設定
+  ユーザーの作成と認証
+  
