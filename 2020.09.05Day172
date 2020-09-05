@@ -1,0 +1,88 @@
+✔️Done list
+　Rails絞込み機能の作成
+
+✔️TIL
+◼︎jQueryでの無名関数 $(function(){ ... } の意味
+　(参照: https://qiita.com/bakatono_super/items/fcbc828b21599568a597
+        http://webnonotes.com/javascript-2/function/)
+
+・意味
+　 簡単に言うと予約状態
+ 　ページが読み込み完了し、DOM(Document Object Modelの略で、HTML文書およびXML文書のためのアプリケーション=プログラミング=インターフェイス(API)、文書の論理的構造や、文書へのアクセスや操作の方法を定義するもの)の構築が完了した時点でfunction()内が実行される
+   jQueryでコードの実行を、ドキュメント(HTML)の読込み後に行わせるための記述
+  
+ ・基本構文
+  $(function(){
+  //なにかしらの処理
+  });
+  
+ ・例
+  index.html
+  !DOCTYPE
+  <html lang="ja">
+   <head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+
+  <!-- scriptファイルの読み込み -->
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="main.js"></script>             <!-- 1 -->
+
+   </head>
+  <body>
+
+   </body>
+  </html>
+
+  JavaScript
+  main.js
+  $(function(){
+   //なにかしらの処理
+  });
+  
+  jQueryのライブラリと実際にコードを書いていく(main.js)ファイルは外部から呼び出しています。
+  そしてmain.jsの中身は処理を書いていく為に必要な最初のコード$(function(){...})が書かれています。
+
+  HTMLが実行される順番から見ていきます。
+  HTMLは基本的に上から順番に処理が実行されます。
+
+  そして1の所まで到達すると読み込みを開始し、完了後すぐにその内容を実行することになります。
+
+  しかし、ここで一つ問題が・・・
+
+  main.jsの中身にはHTMLの要素を操作する命令が書かれていることが多いのですが
+  コードではまだhead要素の途中までしか読み込めていません。
+  1番以降の要素がまだ認識されていない為
+  処理を実行する事ができないということになってしまいます。
+
+  その問題を解決するのが$(function(){...})です。
+
+   main.jsの処理を一旦予約状態で止めておいて
+   HTMLの読み込みが全て完了した後にmain.jsが実行されるというわけです。
+
+   $(function(){...})を書き忘れると？
+   コードを書き忘れるとHTMLを最後まで読み込まずにmain.jsが実行されてしまう。
+
+  jQueryを使う時は$(function(){...})と覚えていれば
+  とりあえず大丈夫。
+ 
+  
+  
+ ・複数の書き方 
+  $(function(){ 
+  //処理
+　}
+　と
+　$(document).ready(function(){
+　//処理
+　});
+　は全く同じ動作になる。
+ 
+ 　jQuery(function(){ 
+  　　//処理
+　　}
+　　と
+　　jQuery(document).ready(function(){
+ 　　 //処理
+　　});
+　 も同じ意味となる。
