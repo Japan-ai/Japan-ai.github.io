@@ -1,0 +1,11 @@
+✔️Done list
+　rails 絞り込み機能
+ 
+  書籍　Ruby on Rails5アプリケーションプログラミングday1
+　
+✔️TIL
+  request.path：現在のURLを取得
+　jQueryのchange()：プルダウンを切り替えたり、テキストボックス、チェックボックスに変更を加えるたびに発動させたり、ボタンをクリックしなくても発動させることができる。
+  jQueryでチェックボックスを操作する方法(参照:https://www.flatflag.nir87.com/checkbox-1286)
+  location.href：完全なURLを取得、変更する
+  jQueryのval()：HTMLタグ内に記述されているvalue属性を取得したり変更することができるメソッド 
