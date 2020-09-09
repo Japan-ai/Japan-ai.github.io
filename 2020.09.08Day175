@@ -1,0 +1,32 @@
+
+✔️Done list
+  絞込み機能の作成
+　環境構築エラー対応(bundleがrbenvでなくPCのバージョンを見てしまう)
+  catコマンド
+  vimコマンド
+  bastionを踏み台にSequelProでssh接続
+  
+  Rubyのattr_accessor
+  Ruby on Railsチュートリアル第4版第9章(参照:https://railstutorial.jp/chapters/advanced_login?version=5.0#cha-advanced_login)
+
+✔️TIL
+　 catコマンド
+  　　指定されたファイルの中身を見る
+    　ファイルの新規作成
+      ファイルへの追記
+      ファイルのコピー
+      ファイルの結合
+      
+   vimコマンド
+   　$ vi ファイル名   　　　　　　　　　　　　　  ...指定して起動  
+　　 $ vi ファイル名1 ファイル名2 … ファイル名n    ...複数ファイル起動  
+ 　　$ vi -R ファイル名 or $ view ファイル名    　...読み込み専用で起動
+     :w    ...書込み保存(w: write の意味)
+   　:q     ...書込みを行わず終了(quit の意味)
+　　 :q!    ...書込みを行わず強制終了
+   　:wq    ...書込み後終了
+　　 :wq!   ...書込み後強制終了
+   
+    Rubyのattr_accessor：インスタンス変数を外からアクセス可能
+    (参照:https://qiita.com/jordi/items/7baeb83788c7a8f2070d)
+   　
