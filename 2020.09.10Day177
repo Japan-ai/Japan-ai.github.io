@@ -1,0 +1,34 @@
+✔️Done list
+　◼︎絞込み機能の作成
+  ◼︎対応体制のDB追加
+　
+ 
+✔️TIL
+　◼︎Railsのdb/schema.rbの役割
+ 　・"1つschema.rbがどこかで管理されていれば、同じDBを使う他のrailsアプリではschema.rbは配置しなくて良いと言える"
+   ・db/schema.rbはなくても動くが、複数の環境間でスキーマの整合性を保つためにどこかに1つは管理しておくべきである。
+   詳細説明
+   rails/railsのファイル全てに対してschema.rbでgrepをかけると、3箇所で使われていることがわかる。
+   それぞれが最終的にどのような役割を果たすかは以下の通り。
+   
+  　 １ActiveRecord::Railtieのinitializer
+    （schema.rbがあると、そのアプリでスキーマを更新した後、依存関係の再読み込みが行われるようになる。
+    　別のアプリ等でスキーマ管理をする場合は、スキーマが更新されたらこの仕組みを使う（rake db:schema:load等）か何らかの方法で読み込んだ依存関係をクリアする必要がある。)
+　　 
+   　２ActiveRecord::Tasks::DatabaseTasks
+    （これは実際のところ3でのみ使われるモジュールである。がdb/schema.rbを読み込むときに使われる。）
+  　 
+　   ３active_record/railties/databases.rake
+　　 （rake db:** のタスクが定義されているファイル。この中で、schema.rbを使うタスクは以下のとおりであった。 (deprecatedなものを除く)
+   　  rake db:schema:dump
+     　db:migrate、db:rollback などが依存している
+       現在のスキーマからschema.rbを作成する
+       rake db:schema:load
+       db:setup、db:reset などが依存している
+       schema.rbからテーブルを作成する
+       要するにschema.rbにスキーマ定義をダンプしたり、schema.rbからダンプしておいたスキーマを再現するのに使える。
+       
+       試しでインデックスを張り替えたりしていると本来のスキーマとずれてしまうことがあると思うが、その際にschema.rbがあれば元の状態に復元できるので、複数の環境間でスキーマの整合性を保つためにschema.rbは1つはあったほうが良い。
+       逆に、1つschema.rbがどこかで管理されていれば、同じDBを使う他のrailsアプリではschema.rbは配置しなくて良いと言える。）
+　　
+　　
