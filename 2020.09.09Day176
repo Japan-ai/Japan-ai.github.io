@@ -6,4 +6,25 @@
   Ruby on Rails5アプリケーションプログラミング1〜3章、一部5章
   
 ✔️TIL
+　◼︎raw ヘルパー
+ 　・式の先頭にrawを付けることは、実際にはto_sを使ってチェーンされたhtml_safeを呼び出すことと同じで、エスケープ処理の回避をしている
+ 　・基本構文
+  　　<%= raw @x %>
+   ・例文 下記は全て同じ意味
+    　<%= @cms.current_template.html_safe %>
+      <%= raw @cms.current_template %>
+      <%== @cms.current_template %>
+   ◼︎trailing_slash
+   　・意味
+    　RailsでURL末尾のスラッシュを付ける
+  ◼︎to_i メソッド
+  　　・意味
+    　Floatクラスのオブジェクトを、Integerクラスのオブジェクトへ変換するメソッド
+     ・例文
+      to_i.integer?
+      数値化して、整数かどうか判定
+  ◼︎raise ActiveRecord::RecordNotFound
+  　・意味
+   　例外の場合にエラーを発生させる
+
 　
