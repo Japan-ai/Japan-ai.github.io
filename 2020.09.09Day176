@@ -1,0 +1,9 @@
+
+✔️Done list
+　環境構築デバッグ($ rails sでブラウザが起動しないエラー、エラー要因はrubyおよびbundle、bundleのパスが設定できていなかったこと、$gem installのバージョンと$bundle installのバージョンが整合していなかったこと)
+  絞り込み機能
+  
+  Ruby on Rails5アプリケーションプログラミング1〜3章、一部5章
+  
+✔️TIL
+　
