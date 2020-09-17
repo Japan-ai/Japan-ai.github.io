@@ -1,0 +1,40 @@
+✔️Done list
+　Ruby絞込み機能CSS
+✔️TIL
+　◼︎content_forについて
+ 　(参照:https://a-records.info/change-layout-content-by-content_for/)
+  　content_forでレイアウトの内容をviewから柔軟に変更する
+   Railsデフォルトのレイアウトではviewはbody内部から始まりますが、titleなどbodyの外側を柔軟に変更したい時もありますよね。そこで便利なのがcontent_forです。
+   content_forはシンボルとそれに対応するコンテンツ（要するに文字列の塊）を定義するメソッドで、定義したコンテンツはyieldで別の場所から引き出すことができます。
+   これを使うとレイアウトの一部をプレースホルダ的にしておいてrenderされたviewの側からレイアウトにコンテンツを追加することができます。
+   
+   簡単な例
+   例えば/views/layouts/application.html.erbのtitleタグを
+   <title><%= yield(:title) %></title>
+   とし、それを使うview内で
+   <% content_for(:title, 'FAQ') %>
+   とすればそのページタイトルはFAQになります。
+   ちなみにですが、content_for(:title)のように引数1つで呼んだ場合yield(:title)と同じ働きをしますので、レイアウト側は
+   <title><%= content_for(:title) %></title>
+   でも構いません。これは以下yieldと書いている場所全てに当てはまります。
+   APIドキュメントによるとビューヘルパー内でコンテンツを取り出したいときはyieldではなくcontent_forを使わないと動かないようです。
+   ちなみにRubyなので引数の括弧は要りませんが以下の例で三項演算子を使うときは囲ってないとシンタックスエラーになります。
+   
+   head内にタグを追加する
+   仮に特定のviewでだけ、Google FontsのWebフォントを読み込むためのタグをhead内に追加したいとします。
+   application.html.erbのhead内
+   <%= yield(:head) %>
+   </head> 
+   <%= yield(:head) %>
+   </head> 
+   のようにyieldを入れておき、Webフォントを読み込みたいviewに
+   <% content_for :head do %>
+   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   <% end %>
+   <% content_for :head do %>
+   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   <% end %>
+   という風に追加したいタグを羅列するとレイアウトのyield箇所にタグを挿入することができます。（サンプルなのでGoogle Fontsは1つのタグで複数読み込めるというのは置いといてください…）
+   titleの例と違いブロックで定義していますが、content_forは第2引数またはブロックでコンテンツを定義することができます。
